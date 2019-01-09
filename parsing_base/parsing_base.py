@@ -6,7 +6,7 @@ input_file_base = open(file_base, mode='r', encoding='utf-8')
 output_file_base = open(file_base_write, mode='w', encoding='utf-8')
 
 
-lookfor = r"[\w.@-]+"
+lookfor = r"[\w.-]+@[A-Za-z-]+\.[\w.]+"
 
 text = input_file_base.read()
 results = re.findall(lookfor, text)
